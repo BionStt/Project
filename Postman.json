@@ -1,0 +1,177 @@
+{
+    "info": {
+        "_postman_id": "504fd53b-c888-4fc7-a748-062913f48796",
+        "name": "User",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Add",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"Name\": \"Name {{$timestamp}}\",\n\t\"Surname\": \"Surname {{$timestamp}}\",\n\t\"Email\": \"{{$timestamp}}@email.com\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "https://localhost:5050/user",
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5050",
+                    "path": [
+                        "user"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "List",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://localhost:5050/user",
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5050",
+                    "path": [
+                        "user"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://localhost:5050/user/1",
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5050",
+                    "path": [
+                        "user",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "UpdateEmail",
+            "request": {
+                "method": "PATCH",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"email\": \"PATCH@email.com\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "https://localhost:5050/user/1/email",
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5050",
+                    "path": [
+                        "user",
+                        "1",
+                        "email"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"Name\": \"Name PUT\",\n\t\"Surname\": \"Surname PUT\",\n\t\"Email\": \"PUT@email.com\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "https://localhost:5050/user/1",
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5050",
+                    "path": [
+                        "user",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "https://localhost:5050/user/1",
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5050",
+                    "path": [
+                        "user",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ],
+    "protocolProfileBehavior": {}
+}
